@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,31 @@
             padding: 20px;
             background-color: #f0f0f0;
         }
+
         .container {
             max-width: 600px;
             margin: auto;
             background: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .form-group {
             margin-bottom: 15px;
         }
+
         label {
             display: block;
             margin-bottom: 5px;
         }
-        input, select {
+
+        input,
+        select {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
         }
+
         button {
             padding: 10px 20px;
             background-color: #007BFF;
@@ -37,14 +44,17 @@
             border: none;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #0056b3;
         }
+
         .result {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Student Performance Prediction</h1>
@@ -62,7 +72,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="family_type">Family Type</label>
+                <label for="family_type">Family type</label>
                 <select id="family_type" name="family_type" required>
                     <option value="">Select</option>
                     <option value="Joint family">Joint family</option>
@@ -70,34 +80,35 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="literacy">Literacy in Family</label>
-                <select id="literacy" name="literacy" required>
+                <label for="literacy_in_family">Literacy in family</label>
+                <select id="literacy_in_family" name="literacy_in_family" required>
                     <option value="">Select</option>
                     <option value="both the parents are well educated">Both the parents are well educated</option>
-                    <option value="both the parents are not well educated">Both the parents are not well educated</option>
+                    <option value="both the parents are not well educated">Both the parents are not well educated
+                    </option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="income">Family Income</label>
-                <select id="income" name="income" required>
+                <label for="family_income">Family income</label>
+                <select id="family_income" name="family_income" required>
                     <option value="">Select</option>
+                    <option value="upto 20,000">Upto 20,000</option>
                     <option value="20,001 to 40,000">20,001 to 40,000</option>
                     <option value="40,001 to 60,000">40,001 to 60,000</option>
-                    <option value="upto 20,000">Upto 20,000</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="fathers_occupation">Father's Occupation</label>
+                <label for="fathers_occupation">Father's occupation</label>
                 <select id="fathers_occupation" name="fathers_occupation" required>
                     <option value="">Select</option>
                     <option value="private job">Private job</option>
-                    <option value="govt job">Govt job</option>
-                    <option value="self-employee">Self-employee</option>
+                    <option value="govt job">Government job</option>
+                    <option value="self-employee">Self-employed</option>
                     <option value="business">Business</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="residential_area">Residential Area/Place of Living</label>
+                <label for="residential_area">Residential area</label>
                 <select id="residential_area" name="residential_area" required>
                     <option value="">Select</option>
                     <option value="urban area">Urban area</option>
@@ -105,7 +116,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="school_type">Type of School</label>
+                <label for="school_type">Type of school</label>
                 <select id="school_type" name="school_type" required>
                     <option value="">Select</option>
                     <option value="private school">Private school</option>
@@ -113,40 +124,40 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="transportation">Transportation to the School</label>
-                <select id="transportation" name="transportation" required>
+                <label for="transportation_to_school">Transportation to the school</label>
+                <select id="transportation_to_school" name="transportation_to_school" required>
                     <option value="">Select</option>
                     <option value="by personal vehicle">By personal vehicle</option>
                     <option value="by school bus">By school bus</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="attend_school">Are you attending school regularly?</label>
-                <select id="attend_school" name="attend_school" required>
+                <label for="attending_school_regularly">Are you attending school regularly?</label>
+                <select id="attending_school_regularly" name="attending_school_regularly" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="bunk_class">Do you bunk class regularly?</label>
-                <select id="bunk_class" name="bunk_class" required>
+                <label for="bunk_class_regularly">Do you bunk class regularly?</label>
+                <select id="bunk_class_regularly" name="bunk_class_regularly" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="fear_school">Do you feel fear to go to school?</label>
-                <select id="fear_school" name="fear_school" required>
+                <label for="fear_going_to_school">Do you feel fear to go to school?</label>
+                <select id="fear_going_to_school" name="fear_going_to_school" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="relationship_with_parents">Do you have a good relationship with your parents?</label>
-                <select id="relationship_with_parents" name="relationship_with_parents" required>
+                <label for="good_relationship_with_parents">Do you have a good relationship with your parents?</label>
+                <select id="good_relationship_with_parents" name="good_relationship_with_parents" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -169,8 +180,9 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="educational_work_at_home">Are you interested to do your educational work at home?</label>
-                <select id="educational_work_at_home" name="educational_work_at_home" required>
+                <label for="interest_in_educational_work">Are you interested in doing your educational work at
+                    home?</label>
+                <select id="interest_in_educational_work" name="interest_in_educational_work" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -185,7 +197,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="financial_worry">Are you worried about the financial condition of your family?</label>
+                <label for="financial_worry">Do you worry about the financial condition of your family?</label>
                 <select id="financial_worry" name="financial_worry" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
@@ -193,16 +205,16 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="parental_involvement">Do your parents get personally involved in your development?</label>
-                <select id="parental_involvement" name="parental_involvement" required>
+                <label for="parent_involvement">Do your parents get personally involved in your development?</label>
+                <select id="parent_involvement" name="parent_involvement" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="residency_satisfaction">Are you satisfied with your residency facility?</label>
-                <select id="residency_satisfaction" name="residency_satisfaction" required>
+                <label for="residency_facility_satisfaction">Are you satisfied with your residency facility?</label>
+                <select id="residency_facility_satisfaction" name="residency_facility_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
                     <option value="Satisfied">Satisfied</option>
@@ -210,7 +222,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="parent_contribution_satisfaction">Are you satisfied with parent's contribution in your educational performance?</label>
+                <label for="parent_contribution_satisfaction">Are you satisfied with Parent's contribution in your
+                    educational performance?</label>
                 <select id="parent_contribution_satisfaction" name="parent_contribution_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
@@ -219,7 +232,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="transportation_satisfaction">Are you satisfied with personal transportation to school?</label>
+                <label for="transportation_satisfaction">Are you satisfied with Personal transportation to
+                    school?</label>
                 <select id="transportation_satisfaction" name="transportation_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
@@ -247,30 +261,33 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="urban_residency_satisfaction">Are you satisfied with residency in urban area for your educational performance?</label>
-                <select id="urban_residency_satisfaction" name="urban_residency_satisfaction" required>
+                <label for="residency_urban_satisfaction">Are you satisfied with residency in urban area for your
+                    educational performance?</label>
+                <select id="residency_urban_satisfaction" name="residency_urban_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
                     <option value="Satisfied">Satisfied</option>
+                    <option value="Dis-satisfied">Dis-satisfied</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="residency_rural_satisfaction">Are you satisfied with residency in rural area for your
+                    educational performance?</label>
+                <select id="residency_rural_satisfaction" name="residency_rural_satisfaction" required>
+                    <option value="">Select</option>
+                    <option value="highly satisfied">Highly satisfied</option>
+                    <option value="Satisfied">Satisfied</option>
+                    <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
                     <option value="Neutral">Neutral</option>
                     <option value="Dis-satisfied">Dis-satisfied</option>
-                    <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="rural_residency_satisfaction">Are you satisfied with residency in rural area for your educational performance?</label>
-                <select id="rural_residency_satisfaction" name="rural_residency_satisfaction" required>
-                    <option value="">Select</option>
-                    <option value="highly satisfied">Highly satisfied</option>
-                    <option value="Satisfied">Satisfied</option>
-                    <option value="Neutral">Neutral</option>
-                    <option value="Dis-satisfied">Dis-satisfied</option>
-                    <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="home_atmosphere">Are you satisfied with the atmosphere at home for your educational performance?</label>
-                <select id="home_atmosphere" name="home_atmosphere" required>
+                <label for="home_atmosphere_satisfaction">Are you satisfied with the atmosphere at home for your
+                    educational performance?</label>
+                <select id="home_atmosphere_satisfaction" name="home_atmosphere_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
                     <option value="Neutral">Neutral</option>
@@ -279,16 +296,16 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="favorite_school_activity">Which activity of the school do you enjoy the most?</label>
-                <select id="favorite_school_activity" name="favorite_school_activity" required>
+                <label for="school_activity_enjoy">Which activity of the school do you enjoy the most?</label>
+                <select id="school_activity_enjoy" name="school_activity_enjoy" required>
                     <option value="">Select</option>
-                    <option value="extra carricular activity">Extra-curricular activity</option>
+                    <option value="extra carricular activity">Extra curricular activity</option>
                     <option value="Annual day">Annual day</option>
                     <option value="sports events">Sports events</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="teacher_student_relationship">Do you have a good teacher-student relationship?</label>
+                <label for="teacher_student_relationship">Do you have good teacher-students relationship?</label>
                 <select id="teacher_student_relationship" name="teacher_student_relationship" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
@@ -296,8 +313,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="exam_performance_pressure">Do you feel performance pressure in examination?</label>
-                <select id="exam_performance_pressure" name="exam_performance_pressure" required>
+                <label for="performance_pressure">Do you feel performance pressure in examination?</label>
+                <select id="performance_pressure" name="performance_pressure" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
@@ -312,7 +329,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="teacher_involvement">Do your teachers get personally involved in your development?</label>
+                <label for="teacher_involvement">Do your teachers get personal involvement in your development?</label>
                 <select id="teacher_involvement" name="teacher_involvement" required>
                     <option value="">Select</option>
                     <option value="Yes">Yes</option>
@@ -320,45 +337,50 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="school_infrastructure_satisfaction">Are you satisfied with the infrastructure of the school?</label>
+                <label for="school_infrastructure_satisfaction">Are you satisfied with the infrastructure of the
+                    school?</label>
                 <select id="school_infrastructure_satisfaction" name="school_infrastructure_satisfaction" required>
                     <option value="">Select</option>
-                    <option value="highly satisfied">Highly satisfied</option>
                     <option value="Satisfied">Satisfied</option>
+                    <option value="highly satisfied">Highly satisfied</option>
                     <option value="Neutral">Neutral</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="teacher_contribution_satisfaction">Are you satisfied with teacher's contribution in your educational performance?</label>
+                <label for="teacher_contribution_satisfaction">Are you satisfied with Teacher's contribution in your
+                    educational performance?</label>
                 <select id="teacher_contribution_satisfaction" name="teacher_contribution_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
-                    <option value="Neutral">Neutral</option>
                     <option value="Satisfied">Satisfied</option>
+                    <option value="Neutral">Neutral</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="school_transportation_satisfaction">Are you satisfied with the transportation facility provided by the school?</label>
+                <label for="school_transportation_satisfaction">Are you satisfied with Transportation facility provided
+                    by school?</label>
                 <select id="school_transportation_satisfaction" name="school_transportation_satisfaction" required>
                     <option value="">Select</option>
+                    <option value="highly dis - satisfied">Highly dis - satisfied</option>
                     <option value="highly satisfied">Highly satisfied</option>
-                    <option value="highly dis - satisfied">Highly dis-satisfied</option>
-                    <option value="Neutral">Neutral</option>
                     <option value="Satisfied">Satisfied</option>
+                    <option value="Neutral">Neutral</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="teacher_student_relationship_satisfaction">Are you satisfied with the teacher-student relationship?</label>
-                <select id="teacher_student_relationship_satisfaction" name="teacher_student_relationship_satisfaction" required>
+                <label for="teacher_student_relationship_satisfaction">Do you satisfied with Teacher-students
+                    relationship?</label>
+                <select id="teacher_student_relationship_satisfaction" name="teacher_student_relationship_satisfaction"
+                    required>
                     <option value="">Select</option>
-                    <option value="highly satisfied">Highly satisfied</option>
                     <option value="Neutral">Neutral</option>
+                    <option value="highly satisfied">Highly satisfied</option>
                     <option value="Satisfied">Satisfied</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="rural_school_satisfaction">Are you satisfied with the school located in a rural area?</label>
-                <select id="rural_school_satisfaction" name="rural_school_satisfaction" required>
+                <label for="school_rural_satisfaction">Are you satisfied with School located in Rural area?</label>
+                <select id="school_rural_satisfaction" name="school_rural_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
                     <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
@@ -368,8 +390,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="urban_school_satisfaction">Are you satisfied with the school located in an urban area?</label>
-                <select id="urban_school_satisfaction" name="urban_school_satisfaction" required>
+                <label for="school_urban_satisfaction">Are you satisfied with School located in urban area?</label>
+                <select id="school_urban_satisfaction" name="school_urban_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
                     <option value="Neutral">Neutral</option>
@@ -377,12 +399,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="school_environment_satisfaction">Are you satisfied with the school environment?</label>
+                <label for="school_environment_satisfaction">Are you satisfied with the environment at school for your
+                    educational performance?</label>
                 <select id="school_environment_satisfaction" name="school_environment_satisfaction" required>
                     <option value="">Select</option>
                     <option value="highly satisfied">Highly satisfied</option>
+                    <option value="highly Dis-satisfied">Highly Dis-satisfied</option>
                     <option value="Neutral">Neutral</option>
                     <option value="Satisfied">Satisfied</option>
+                    <option value="Dis-satisfied">Dis-satisfied</option>
                 </select>
             </div>
             <button type="submit">Predict</button>
@@ -390,7 +415,7 @@
         <div class="result" id="result"></div>
     </div>
     <script>
-        document.getElementById('prediction-form').addEventListener('submit', function(event) {
+        document.getElementById('prediction-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
             const formData = new FormData(this);
@@ -403,18 +428,19 @@
                 },
                 body: JSON.stringify(data),
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    document.getElementById('result').innerText = `Error: ${data.error}`;
-                } else {
-                    document.getElementById('result').innerText = `Predicted Score: ${data.score}`;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById('result').innerText = `Error: ${data.error}`;
+                    } else {
+                        document.getElementById('result').innerText = `Predicted Score: ${data.score}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         });
     </script>
 </body>
+
 </html>
