@@ -38,29 +38,28 @@ def predict():
             data.get('residential_area', np.nan),
             data.get('school_type', np.nan),
             data.get('transportation', np.nan),
-            data.get('attend_school', np.nan),
-            data.get('bunk_class', np.nan),
-            data.get('fear_school', np.nan),
-            data.get('relationship_with_parents', np.nan),
-            data.get('unhealthy_lifestyle', np.nan),
-            data.get('distracted_by_gadgets', np.nan),
-            data.get('educational_work_at_home', np.nan),
-            data.get('tuition_classes', np.nan),
-            data.get('financial_worry', np.nan),
-            data.get('parental_involvement', np.nan),
+            data.get('Are you attending school regularly?', np.nan),
+            data.get('Do you bunk class regularly?', np.nan),
+            data.get('Are you feel fear to go to school?', np.nan),
+            data.get('Do you have good teacher-students relationship??', np.nan),
+            data.get('Do you suffer from unhealthy lifestyle?', np.nan),
+            data.get('Do you interested to do your educational work at home?', np.nan),
+            data.get('Do you go to tuition class or personal classes?', np.nan),
+            data.get('Do you worried about financial condition of your family?', np.nan),
+            data.get('Do your parents get personal involvement in your development?', np.nan),
             data.get('residency_satisfaction', np.nan),
             data.get('parent_contribution_satisfaction', np.nan),
             data.get('transportation_satisfaction', np.nan),
-            data.get('society_pressure', np.nan),
-            data.get('family_pressure', np.nan),
+            data.get('what do you feel by society pressure in educational performance?', np.nan),
+            data.get('What do you feel by family pressure in educational performance?', np.nan),
             data.get('urban_residency_satisfaction', np.nan),
             data.get('rural_residency_satisfaction', np.nan),
             data.get('home_atmosphere', np.nan),
             data.get('favorite_school_activity', np.nan),
             data.get('teacher_student_relationship', np.nan),
-            data.get('exam_performance_pressure', np.nan),
-            data.get('exam_fear', np.nan),
-            data.get('teacher_involvement', np.nan),
+            data.get('Do you feel performance pressure in examination?', np.nan),
+            data.get(' Do you feel fear to examination?', np.nan),
+            data.get('Do your teachers get personal involvement in your development?', np.nan),
             data.get('school_infrastructure_satisfaction', np.nan),
             data.get('teacher_contribution_satisfaction', np.nan),
             data.get('school_transportation_satisfaction', np.nan),
@@ -72,15 +71,20 @@ def predict():
 
         df = pd.DataFrame([features], columns=[
             'age', 'gender', 'family_type', 'literacy', 'income', 'fathers_occupation', 'residential_area',
-            'school_type', 'transportation', 'attend_school', 'bunk_class', 'fear_school', 'relationship_with_parents',
-            'unhealthy_lifestyle', 'distracted_by_gadgets', 'educational_work_at_home', 'tuition_classes',
-            'financial_worry', 'parental_involvement', 'residency_satisfaction', 'parent_contribution_satisfaction',
-            'transportation_satisfaction', 'society_pressure', 'family_pressure', 'urban_residency_satisfaction',
-            'rural_residency_satisfaction', 'home_atmosphere', 'favorite_school_activity', 'teacher_student_relationship',
-            'exam_performance_pressure', 'exam_fear', 'teacher_involvement', 'school_infrastructure_satisfaction',
-            'teacher_contribution_satisfaction', 'school_transportation_satisfaction',
-            'teacher_student_relationship_satisfaction', 'rural_school_satisfaction', 'urban_school_satisfaction',
-            'school_environment_satisfaction'
+            'school_type', 'transportation', 'Are you attending school regularly?', 'Do you bunk class regularly?',
+            'Are you feel fear to go to school?', 'Do you have good teacher-students relationship??',
+            'Do you suffer from unhealthy lifestyle?', 'Do you interested to do your educational work at home?',
+            'Do you go to tuition class or personal classes?', 'Do you worried about financial condition of your family?',
+            'Do your parents get personal involvement in your development?', 'residency_satisfaction',
+            'parent_contribution_satisfaction', 'transportation_satisfaction',
+            'what do you feel by society pressure in educational performance?',
+            'What do you feel by family pressure in educational performance?', 'urban_residency_satisfaction',
+            'rural_residency_satisfaction', 'home_atmosphere', 'favorite_school_activity',
+            'teacher_student_relationship', 'Do you feel performance pressure in examination?',
+            ' Do you feel fear to examination?', 'Do your teachers get personal involvement in your development?',
+            'school_infrastructure_satisfaction', 'teacher_contribution_satisfaction',
+            'school_transportation_satisfaction', 'teacher_student_relationship_satisfaction',
+            'rural_school_satisfaction', 'urban_school_satisfaction', 'school_environment_satisfaction'
         ])
 
         # Normalize the numeric columns
@@ -97,6 +101,7 @@ def predict():
         label_encoder = LabelEncoder()
         for col in df.select_dtypes(include=['object']).columns:
             df[col] = label_encoder.fit_transform(df[col])
+        df['Normalized_Score'] = 0.5
 
         # Select model for prediction (you can add logic to choose different models)
         model = models['gradient_boosting']
@@ -109,4 +114,4 @@ def predict():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True , host='0.0.0.0')
+    app.run(host='0.0.0.0')
